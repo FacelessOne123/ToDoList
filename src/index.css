@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.task-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.task-container .trash {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.task-container:hover .trash {
+  opacity: 1;
+}
+
+.task-container .trash svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
+}
+
+.task-container .trash:hover svg {
+  fill: #ff4444;
+}
+
+.task.done {
+  opacity: 0.5;
+}
+
+.trash.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.trash.disabled svg {
+  fill: #888;
+}
